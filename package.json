@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "sass": "sass sass/style.scss style.css --watch"
+    "sass": "sass sass/style.scss style.css --watch",
+     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "sass": "^1.86.3",
