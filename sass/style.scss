@@ -1,0 +1,12 @@
+// Importaciones de Sass para la estructura de tu proyecto
+@use "./abstracts/abstracts";
+@use "./vendors/vendors";
+@use "./base/base";
+@use "./components/components";
+@use "./layout/layout";
+@use "./pages/pages";
+@use "./themes/themes";
+
+// Importación de settings y reset
+@use "./settings";  // Verifica la ruta correcta
+@use './base/reset';

@@ -1,0 +1,115 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+header {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, red, yellow, blue);
+  .logo{
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    @include breakpoint(tablet) {
+      width: 30px;
+      height: 100px;
+    }
+    @include breakpoint(desktop) {
+      width: 200px;
+      height: 90px;
+    }
+    @include breakpoint(desktopxl) {
+      width: 250px;
+      height: 90px;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: black;
+    margin: 5px;
+    padding: 0px;
+    flex: 1;
+    @include breakpoint(tablet) {
+      font-size: 40px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 50px;
+    }
+    @include breakpoint(desktopxl) {
+      font-size: 60px;
+    }
+  }
+
+  nav {
+    display: flex;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      color: #fff;
+      @include breakpoint(tablet) {
+        flex-direction: row;
+        align-items: center;
+      }
+      @include breakpoint(desktop) {
+        flex-direction: row;
+        align-items: center;
+      }
+      @include breakpoint(desktopxl) {
+        flex-direction: row;
+        align-items: center;
+      }
+      @include reset-list;
+      @include breakpoint(tablet) {
+        flex-direction: row;
+        align-items: center;
+      }
+      @include breakpoint(desktop) {
+        flex-direction: row;
+        align-items: center;
+      }
+      @include breakpoint(desktopxl) {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    li {
+      margin: 5px 10px;
+      list-style: none;
+      display: flex;
+      color: #fff;
+
+      a {
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: black;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+          background-color: #fff;
+          color: #264065;
+          font-weight: bold;
+          font-size: 1.2rem;
+          text-decoration: underline;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+}

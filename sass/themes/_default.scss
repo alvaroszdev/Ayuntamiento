@@ -1,0 +1,18 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+html * {
+  font-family:$primary-font;
+}
+
+html {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 18px;
+  
+
+  
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}

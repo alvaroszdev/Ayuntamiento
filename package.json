@@ -1,0 +1,22 @@
+{
+  "name": "ayuntamientoproyect",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass": "sass sass/style.scss style.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.86.3",
+    "vite": "^6.3.0"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}

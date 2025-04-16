@@ -1,0 +1,139 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+.articles {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); // 1 columna por defecto
+  gap: 2rem; // Espacio entre los artículos
+  margin: 32px auto;
+  max-width: 1200px; // Limitar el tamaño máximo del contenedor
+  padding: 0 1rem;
+
+  .article {
+    background-color: rgba(255, 255, 255, 0.8); // Fondo con opacidad
+    border-radius: 10px; // Bordes redondeados
+    overflow: hidden; // Para que el borde redondeado no se rompa por el contenido
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+      color: $primary-color;
+      margin: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  // Media Queries para dispositivos más pequeños
+  @include breakpoint(tablet) {
+    grid-template-columns: repeat(2, 1fr); // 2 columnas en tablets
+  }
+
+  @include breakpoint(desktopxl) {
+    grid-template-columns: repeat(3, 1fr); // 3 columnas en pantallas grandes
+  }
+}
+
+.team-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+
+  .team-card {
+    width: 250px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666;
+    }
+  }
+}
+
+// Estilos para el footer
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

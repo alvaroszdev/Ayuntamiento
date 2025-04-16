@@ -1,0 +1,12 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.btn{
+     @include button();
+     &:hover {
+          color: $primary-color;
+          background-color: $secondary-color;
+      }
+    
+   
+}

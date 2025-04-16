@@ -1,0 +1,108 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  background:linear-gradient(to right, red,yellow,blue);
+  color: #333;
+
+}
+
+header {
+  padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, red, yellow);
+  text-align: center; /* Para centrar los elementos dentro del header */
+}
+
+header .logo {
+  margin-right: auto;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra el menú horizontalmente */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center; /* Centra los items del menú */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: pink; /* Un color más visible al pasar el ratón */
+  transform: scale(1.1);
+}
+
+/* Estilo para el layout en pantallas grandes */
+@include breakpoint(tablet) {
+  header {
+    flex-direction: row; /* Cambiar la dirección a fila */
+    align-items: center; /* Asegura que todo esté centrado */
+  }
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    justify-content: center; /* Asegura que los elementos del menú estén centrados */
+  }
+}
+
+/* Responsivo para pantallas más pequeñas */
+@include breakpoint(tablethorizontal) {
+  header {
+    flex-direction: column; /* Cambiar la dirección a columna */
+    align-items: center; /* Asegura que todo esté centrado */
+  }
+
+  nav ul {
+    flex-direction: column; /* Los items del menú se apilan verticalmente */
+    align-items: center; /* Centra los items dentro del menú */
+  }
+
+  nav li {
+    margin-bottom: 10px; /* Añadir espacio entre los elementos del menú */
+  }
+}
